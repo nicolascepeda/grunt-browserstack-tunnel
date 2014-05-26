@@ -11,11 +11,7 @@ module.exports = function(grunt) {
     var BrowserStackTunnel = require('browserstacktunnel-wrapper');
     var browserStackTunnel = new BrowserStackTunnel({
       key: options.accessKey,
-      hosts: [{
-        name: options.hostname,
-        port: options.port,
-        sslFlag: options.sslFlag
-      }]
+      hosts: options.hosts
     });
 
     var done = this.async();
